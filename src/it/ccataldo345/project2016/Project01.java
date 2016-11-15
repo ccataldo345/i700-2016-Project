@@ -9,13 +9,21 @@ import lib.TextIO;
 public class Project01 {
     public static void main(String[] args) {
         System.out.println("Project by Christian Cataldo, IT College Tallinn, Cyber Security Engineering, 2016");
-        name();
+        // name();
+        // money();
+        System.out.println(name() + " has " + money() + " Euros.");
     }
 
 
     public static String name() {
         System.out.println("Please enter your name: ");
-        String x = TextIO.getlnString();
-        return x;
+        String name01 = TextIO.getlnString();
+        return name01;
+    }
+
+    public static int money() {
+        System.out.println("Please enter amount in Euros: ");
+        int money01 = TextIO.getlnInt();
+        return money01;
         }
     }
