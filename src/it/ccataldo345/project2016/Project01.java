@@ -1,5 +1,5 @@
 /**
- * Created by Chris01 on 08/11/2016.
+ * Created by Christian Cataldo on 08/11/2016.
  */
 
 package it.ccataldo345.project2016;
@@ -9,21 +9,48 @@ import lib.TextIO;
 public class Project01 {
     public static void main(String[] args) {
         System.out.println("Project by Christian Cataldo, IT College Tallinn, Cyber Security Engineering, 2016");
-        // name();
-        // money();
-        System.out.println(name() + " has " + money() + " Euros.");
+        Person personAccount = getPersonData();
+        double gain = personAccount.calculateGain();
+        System.out.println(personAccount.getName()+ " has " + personAccount.getMoney() + " Euros.");
+        System.out.println(personAccount.getName() + " will earn " + gain + " Euros in " + personAccount.getPeriod() + " years!");
     }
 
-
-    public static String name() {
+    public static Person getPersonData(){
+        Person client = new Person();
         System.out.println("Please enter your name: ");
-        String name01 = TextIO.getlnString();
-        return name01;
+        client.setName(TextIO.getlnString());
+
+        System.out.println("Please enter amount in Euros: ");
+        client.setMoney(TextIO.getlnDouble());
+
+        System.out.println("Please enter time lenght of deposit in years: ");
+        client.setPeriod(TextIO.getlnDouble());
+        
+        return client;
     }
 
-    public static int money() {
+
+/*    public static String name() {
+
+        System.out.println("Please enter your name: ");
+        ben.setName(TextIO.getlnString());
+    }*/
+
+/*    public static double money() {
         System.out.println("Please enter amount in Euros: ");
-        int money01 = TextIO.getlnInt();
+        double money01 = TextIO.getlnDouble();
         return money01;
-        }
+    }*/
+
+/*    public static double period() {
+        System.out.println("Please enter time lenght of deposit in years: ");
+        double time01 = TextIO.getlnDouble();
+        return time01;
     }
+
+    public static double gain() {
+        double yield01 = 0.035;
+        double gain01 = money() * period() * yield01;
+        return gain01;
+    }*/
+}
