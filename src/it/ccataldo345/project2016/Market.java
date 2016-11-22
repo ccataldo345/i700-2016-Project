@@ -26,35 +26,46 @@ public class Market {
 
         //calculate change
         changeTotal = payment - cost;
+
+        //paymant less than cost
         if (payment < cost) {
             System.out.printf("Please add %.2f Euro.\n", (cost-payment));
             return;
         }
+
+        //Payment equal cost, no change due
         if (changeTotal == 0) {
             System.out.printf("No change is due. Thanks for buying at Java Market. \n");
             return;
         }
-        System.out.printf("Your total change is: %.2f \n", changeTotal);
 
-        if (changeTotal >= 5.00) {
-            changeNotes = ((int)changeTotal / 5) * 5;
-            changeCoins = changeTotal - changeNotes;
-            System.out.printf("Your change in notes is: %.2f \n", changeNotes);
-        } else {
-            changeCoins = changeTotal;
-        }
+        //payment more than cost, change calculation
+        System.out.printf("Your total change is: %.2f Euro.\n", changeTotal);
+        System.out.println();
+
+        changeNotes = ((int)changeTotal / 5) * 5;
+        changeCoins = changeTotal - changeNotes;
+
+
+        System.out.printf("Your change in notes is: %.2f Euro.\n", changeNotes);
+        System.out.println();
+
+        changeCoins = changeTotal - changeNotes;
+        System.out.printf("Your change in coins is: %.2f Euro.\n", changeCoins);
+        System.out.println();
+        changeCoins = Math.round(changeCoins*100.00);
 
         // calculate number of coins
 
         //coins value
-        twoEuro = 2.00;
-        oneEuro = 1.00;
-        fiftyCent = 0.50;
-        twentyCent = 0.20;
-        tenCent = 0.10;
-        fiveCent = 0.05;
-        twoCent = 0.02;
-        oneCent = 0.01;
+        twoEuro = 200;
+        oneEuro = 100;
+        fiftyCent = 50;
+        twentyCent = 20;
+        tenCent = 10;
+        fiveCent = 5;
+        twoCent = 2;
+        oneCent = 1;
 
         c0 = (int)(changeCoins / twoEuro);      //number of 2 Euro coins
         x1 = changeCoins % twoEuro;             //change after 2 Euros
@@ -70,7 +81,7 @@ public class Market {
         x6 = x5 % fiveCent;
         c6 = (int)(x6 / twoCent);
         x7 = x6 % twoCent;
-        c7 = (int)(x7 / oneCent+0.01);    //ERROR??? try price 1 and payment 1.2
+        c7 = (int)(x7 / oneCent);
 
         coins = c0 + c1 + c2 + c3 + c4 + c5 + c6 + c7;    //total number of coins
 
@@ -84,18 +95,18 @@ public class Market {
         k7 = c7 * oneCent;
         kTot = (k0 + k1 + k2 + k3 + k4 + k5 + k6 + k7);
 
-        System.out.printf("Your change in coins is: %.2f \n", changeCoins);
 
-        System.out.printf("- Coins of 2 Euro:   %d  (%.2f)\n", c0, k0);
-        System.out.printf("- Coins of 1 Euro:   %d  (%.2f)\n", c1, k1);
-        System.out.printf("- Coins of 50 cent:  %d  (%.2f)\n", c2, k2);
-        System.out.printf("- Coins of 20 cent:  %d  (%.2f)\n", c3, k3);
-        System.out.printf("- Coins of 10 cent:  %d  (%.2f)\n", c4, k4);
-        System.out.printf("- Coins of 5 cent:   %d  (%.2f)\n", c5, k5);
-        System.out.printf("- Coins of 2 cent:   %d  (%.2f)\n", c6, k6);
-        System.out.printf("- Coins of 1 cent:   %d  (%.2f)\n", c7, k7);
+
+        System.out.printf("- Coins of 2 Euro:   %d  (%.2f)\n", c0, k0/100);
+        System.out.printf("- Coins of 1 Euro:   %d  (%.2f)\n", c1, k1/100);
+        System.out.printf("- Coins of 50 cent:  %d  (%.2f)\n", c2, k2/100);
+        System.out.printf("- Coins of 20 cent:  %d  (%.2f)\n", c3, k3/100);
+        System.out.printf("- Coins of 10 cent:  %d  (%.2f)\n", c4, k4/100);
+        System.out.printf("- Coins of 5 cent:   %d  (%.2f)\n", c5, k5/100);
+        System.out.printf("- Coins of 2 cent:   %d  (%.2f)\n", c6, k6/100);
+        System.out.printf("- Coins of 1 cent:   %d  (%.2f)\n", c7, k7/100);
         System.out.printf("======================\n");
-        System.out.printf("TOTAL NO. OF COINS:  %d  (%.2f)\n", coins, kTot);
+        System.out.printf("TOTAL NO. OF COINS:  %d  (%.2f)\n", coins, kTot/100);
         System.out.printf("\n");
 
         if (coins > 5)
