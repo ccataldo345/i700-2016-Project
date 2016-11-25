@@ -1,46 +1,43 @@
 package it.ccataldo345.project2016;
 
-import java.text.DecimalFormat;
-
 /**
  * Created by Chris01 on 16/11/2016.
  */
-public class Account {
+public class Account extends Object {
     private String name;
-    private double money;
-    private double period;
-    private double gain;
+    private double credit;
 
-    private static final double YIELD = 0.035;
+    public Account() {
 
-    public double calculateGain() {
-        this.gain = this.money * this.period * YIELD;
-        String round = String.format("%1.2f", this.gain);  // set the decimals to 2
-        this.gain = Double.valueOf(round);
-        return this.gain;
     }
 
-    public String getName(){
+    public Account(String name, double credit) {
+        this.name = name;
+        this.credit = credit;
+    }
+
+    public void greet() {
+        System.out.println(greetAsString());
+    }
+
+    public String greetAsString() {
+        return "Welcome Mr. " + name + ", your credit is " + credit + ".";
+    }
+
+    public String getName() {
         return this.name;
     }
 
-    public void setName(String inputName){
+    public void setName(String inputName) {
         this.name = inputName;
     }
 
-    public double getMoney() {
-        return money;
+    public double getCredit() {
+        return credit;
     }
 
-    public void setMoney(double money) {
-        this.money = money;
+    public void setCredit(double credit) {
+        this.credit = credit;
     }
 
-    public double getPeriod() {
-        return period;
-    }
-
-    public void setPeriod(double period) {
-        this.period = period;
-    }
 }
