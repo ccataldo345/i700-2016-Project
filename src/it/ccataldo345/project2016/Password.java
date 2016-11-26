@@ -7,7 +7,7 @@ import lib.TextIO;
  + added functions from Practicum 3
  + added functions from Practicum 4
  */
-public class Password {
+public class Password extends Account{
     public static void main(String[] args) {
         System.out.println("Please enter the password: (hint: type 'password')");
         String password = TextIO.getlnString();

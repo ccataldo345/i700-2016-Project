@@ -5,7 +5,7 @@ import lib.TextIO;
 /**
  * Created by Christian Cataldo on 19/11/2016.
  */
-public class Market {
+public class Coins extends Games {
     public static void main(String[] args) {
 
         int coins, c0, c1, c2, c3, c4, c5, c6, c7;  //no. of coins
@@ -18,7 +18,7 @@ public class Market {
 
         // ask user for input
 
-        System.out.printf("Hello, welcome to Java Market!\n");
+        System.out.printf("Hello, welcome to Java Coins!\n");
         System.out.printf("What is the price of the item you want to buy? (insert amount in Euro)\n");
         cost = TextIO.getDouble();
         System.out.printf("How would you like to pay? (insert amount in Euro)\n");
@@ -35,7 +35,7 @@ public class Market {
 
         //Payment equal cost, no change due
         if (changeTotal == 0) {
-            System.out.printf("No change is due. Thanks for buying at Java Market. \n");
+            System.out.printf("No change is due. Thanks for buying at Java Coins. \n");
             return;
         }
 

@@ -1,7 +1,7 @@
 package it.ccataldo345.project2016;
 
 /**
- * Created by Chris01 on 16/11/2016.
+ * Created by Christian on 16/11/2016.
  */
 public class Account extends Object {
     private String name;
@@ -14,6 +14,8 @@ public class Account extends Object {
     public Account(String name, double credit) {
         this.name = name;
         this.credit = credit;
+        String creditRound = String.format("%.2f", this.credit);  // set the decimals to 2
+        this.credit = Double.valueOf(creditRound);
     }
 
     public void greet() {
@@ -24,6 +26,7 @@ public class Account extends Object {
         return "Welcome Mr. " + name + ", your credit is " + credit + ".";
     }
 
+    //get and set variables name and credit
     public String getName() {
         return this.name;
     }

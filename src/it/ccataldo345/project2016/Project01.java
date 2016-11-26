@@ -1,5 +1,6 @@
 /**
  * Created by Christian Cataldo on 08/11/2016.
+ * Project by Christian Cataldo, IT College Tallinn, CSE group C11, 2016
  */
 
 package it.ccataldo345.project2016;
@@ -15,7 +16,7 @@ public class Project01 {
         System.out.println("What would you like to do?:");
         System.out.println("1) Go to your account;");
         System.out.println("2) Play games;");
-        System.out.println("3) Buy in our store.");
+        System.out.println("3) Buy in our shop.");
         System.out.println();
 
         System.out.println("Please enter your choice:");
@@ -54,5 +55,4 @@ public class Project01 {
             }
         }
     }
-
 }
