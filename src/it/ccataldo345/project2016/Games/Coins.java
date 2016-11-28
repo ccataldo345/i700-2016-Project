@@ -1,12 +1,13 @@
-package it.ccataldo345.project2016;
+package it.ccataldo345.project2016.Games;
 
 import lib.TextIO;
 
 /**
  * Created by Christian Cataldo on 19/11/2016.
  */
-public class Coins extends Games {
-    public static void main(String[] args) {
+public class Coins {
+
+    public Coins (String[] args) {
 
         int coins, c0, c1, c2, c3, c4, c5, c6, c7;  //no. of coins
         double x1, x2, x3, x4, x5, x6, x7;          //change after x coin value

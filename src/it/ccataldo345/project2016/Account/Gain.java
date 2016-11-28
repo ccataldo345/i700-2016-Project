@@ -1,12 +1,15 @@
-package it.ccataldo345.project2016;
+package it.ccataldo345.project2016.Account;
 
 /*
 
 * Created by Christian on 25/11/2016.
+
 */
 
 
-public class Gain extends Account{
+import it.ccataldo345.project2016.Account.Account;
+
+public class Gain {
 
     private double period;
     private double gain;

@@ -1,12 +1,17 @@
-package it.ccataldo345.project2016;
+package it.ccataldo345.project2016.Games;
 
 import lib.TextIO;
 
 /**
  * Created by Christian Cataldo on 19/11/2016.
  */
-public class Mario extends Games {
-    public static void main(String[] args) {
+public class Mario {
+
+    public Mario() {
+
+    }
+
+    public void Mario () {
 
         System.out.printf("Hello, this is Mario game!\n");
         System.out.printf("Please insert the pyramid height (1-10)\n");
@@ -21,5 +26,8 @@ public class Mario extends Games {
             }
             System.out.printf("\n");
         }
+
     }
+
 }
+

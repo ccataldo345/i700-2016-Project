@@ -3,12 +3,14 @@
  * Project by Christian Cataldo, IT College Tallinn, CSE group C11, 2016
  */
 
-package it.ccataldo345.project2016;
+package it.ccataldo345.project2016.AAAMain;
 
+import it.ccataldo345.project2016.Account.Account;
+import it.ccataldo345.project2016.Games;
 import lib.TextIO;
 import java.util.ArrayList;
 
-public class Project01 {
+public class ProjectStart {
     public static void main(String[] args) {
         System.out.println("Project by Christian Cataldo, IT College Tallinn, CSE group C11, 2016");
         System.out.println("Welcome to Java online store");
@@ -23,35 +25,36 @@ public class Project01 {
         int choice = TextIO.getlnInt();
 
         //Exit choice
-/*        while (true) {
-            if (choice.isEmpty()) {             //.isEmpty does not work!!!
+        while (true) {
+            if (choice == 0) {             //.isEmpty does not work!!!
                 System.out.printf("Do you want to exit?(y/n):\n");
                 Character exit = TextIO.getlnChar();
                 if (exit == 'y') {
                     break;
                 }
-            }*/
+            }
 
-        if (choice == 1) {
+            if (choice == 1) {
 
-            //Create an arrayList to store the user
-            ArrayList<Account> user = new ArrayList<>();
-
-
-            System.out.printf("Welcome to your Java account!\n");
-            System.out.println("Please enter your name: ");
-            String name = TextIO.getlnString();
-
-            System.out.printf("Please enter your initial credit you want to deposit: \n");
-            double credit = TextIO.getlnDouble();
+                /*//clean the interface
+                public static void clearScreen() {
+                    System.out.print("\033[H\033[2J");
+                    System.out.flush();
+                }*/
 
 
-            Account newAccount = new Account(name, credit);
-            user.add(newAccount);
 
+//                for (Account account : user) {
+//                    account.greet();
+//                }
+            }
 
-            for (Account account : user) {
-                account.greet();
+            if (choice == 2) {
+                //Games;   ????ERRORRRRR
+            }
+
+            if (choice == 3) {
+                //????ERRORRRRR
             }
         }
     }
