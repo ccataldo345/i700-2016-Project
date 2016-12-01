@@ -5,14 +5,21 @@
 
 package it.ccataldo345.project2016.AAAMain;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
 import it.ccataldo345.project2016.Account.Account;
-import it.ccataldo345.project2016.Games;
+import it.ccataldo345.project2016.Games.*;
 import lib.TextIO;
 import java.util.ArrayList;
 
 public class ProjectStart {
     public static void main(String[] args) {
+
+        Account account = new Account();
+
+        System.out.println("*********************************************************************");
         System.out.println("Project by Christian Cataldo, IT College Tallinn, CSE group C11, 2016");
+        System.out.println("*********************************************************************");
+        System.out.println();
         System.out.println("Welcome to Java online store");
         System.out.println();
         System.out.println("What would you like to do?:");
@@ -30,12 +37,13 @@ public class ProjectStart {
                 System.out.printf("Do you want to exit?(y/n):\n");
                 Character exit = TextIO.getlnChar();
                 if (exit == 'y') {
+                    System.out.println("Good bye, have a nice day");
                     break;
                 }
             }
 
             if (choice == 1) {
-
+                account.greetAsString();
                 /*//clean the interface
                 public static void clearScreen() {
                     System.out.print("\033[H\033[2J");
