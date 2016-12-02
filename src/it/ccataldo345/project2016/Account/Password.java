@@ -9,7 +9,10 @@ import lib.TextIO;
  + added functions from Practicum 4
  */
 public class Password {
-    public static void main(String[] args) {
+
+    public void setPassword() {
+
+
         System.out.println("Please enter the password: (hint: type 'password')");
         String password = TextIO.getlnString();
 

@@ -7,11 +7,13 @@ import lib.TextIO;
  */
 public class Mario {
 
-    public Mario() {
+/*    public Mario() {
 
-    }
+    }*/
 
-    public void Mario () {
+
+
+    public void startGame () {
 
         System.out.printf("Hello, this is Mario game!\n");
         System.out.printf("Please insert the pyramid height (1-10)\n");

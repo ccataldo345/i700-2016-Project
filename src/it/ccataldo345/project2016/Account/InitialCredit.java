@@ -1,6 +1,5 @@
 package it.ccataldo345.project2016.Account;
 
-import it.ccataldo345.project2016.Account.Account;
 import lib.TextIO;
 
 /**
@@ -8,43 +7,33 @@ import lib.TextIO;
  */
 public class InitialCredit {
 
-    //Account account = new Account();
-
     public String name;
-    public double credit;
+    public double initialCredit;
 
     /*
-        if (credit > 0) {
-            System.out.println("You have already set your initial credit.");
-            account.greetAsString();
+        if (balance > 0) {
+            System.out.println("You have already set your initialCredit balance.");
+            account.accountHome();
         } else {*/
 
 
-    public InitialCredit() {
-
-    }
-
-
-
-
-
-    public String creditSet(String name, double credit) {
+    public String creditSet(String name, double initialCredit) {
 
         this.name = name;
-        this.credit = credit;
+        this.initialCredit = initialCredit;
 
-        String creditRound = String.format("%.2f", this.credit);  // set the decimals to 2
-        this.credit = Double.valueOf(creditRound);
+        String creditRound = String.format("%.2f", this.initialCredit);  // set the decimals to 2
+        this.initialCredit = Double.valueOf(creditRound);
 
         System.out.println("Please enter your name: ");
         name = TextIO.getlnString();
-        System.out.printf("Please enter the initial credit you want to deposit: \n");
-        credit = TextIO.getlnDouble();
-        System.out.println("Welcome Mr. " + name + ", your initial credit is set to " + credit + " Euro.");
+        System.out.printf("Please enter the initialCredit balance you want to deposit: \n");
+        initialCredit = TextIO.getlnDouble();
+        System.out.println("Mr. " + name + ", your initialCredit balance is set to " + initialCredit + " Euro.");
         return "OK";
     }
 
-    //get and set variables name and credit
+    //get and set variables name and balance
     public String getName() {
         return this.name;
     }
@@ -53,20 +42,15 @@ public class InitialCredit {
         this.name = name;
     }
 
-    public double getCredit() {
-        return credit;
+    public double getInitialCredit() {
+        return initialCredit;
     }
 
-    public void setCredit(double credit) {
-        this.credit = credit;
-    }
-
-    public void greet() {
-        System.out.println(greetAsString());
+    public void setInitialCredit(double initialCredit) {
+        this.initialCredit = initialCredit;
     }
 
     public String greetAsString() {
-        return "Welcome Mr. " + name + ", your credit is " + credit + ".";
+        return "Welcome Mr. " + name + ", your credit is " + initialCredit + ".";
     }
-
 }

@@ -1,30 +1,48 @@
-package it.ccataldo345.project2016;
+package it.ccataldo345.project2016.Games;
 
+import it.ccataldo345.project2016.AAAMain.ProjectStart;
 import lib.TextIO;
 
 //Created by Christian on 25/11/2016.
 
 
 public class Games {
-    private int choiceGames;
+
+    ProjectStart projectStart = new ProjectStart();
 
 
-    public Games(int) {
+    public void gamesHome (){
 
-        System.out.println("Welcome to Java games!");
-        System.out.println("");
         System.out.println();
-        System.out.println("What game you want to play?");
+        System.out.println("*** GAMES ***");
+        System.out.println();
+        System.out.println("What game would you like to play?");
         System.out.println("1) Mario;");
         System.out.println("2) Coins.");
+        System.out.println("3) Go to the previous menu.");
         System.out.println();
         System.out.println("Please enter your choice:");
         int choiceGames = TextIO.getlnInt();
 
-        if(choiceGames ==1) {
-            return Mario;
-        } else if(choiceGames ==2) {
-            return Coins;
+        //Exit choice
+        while (true) {
+            if (choiceGames != 1 && choiceGames != 2 && choiceGames != 3 && choiceGames != 4 && choiceGames != 5) {
+                System.out.printf("Do you want to exit?(y/n):\n");
+                Character exit = TextIO.getlnChar();
+                if (exit == 'y') {
+                    System.out.println("Good bye, have a nice day!");
+                    System.exit(0);
+                    break;
+                } else {
+                    gamesHome();
+                }
+            }
+
+            if(choiceGames ==1) {
+            //return Mario;
+            } else if(choiceGames ==2) {
+            //return Coins;
+            }
         }
     }
 }
