@@ -9,19 +9,22 @@ import lib.TextIO;
 public class Games {
 
     ProjectStart projectStart = new ProjectStart();
+    Mario mario = new Mario();
+    Coins coins = new Coins();
 
 
     public void gamesHome (){
 
         System.out.println();
+        System.out.println("********************");
         System.out.println("*** GAMES ***");
-        System.out.println();
         System.out.println("What game would you like to play?");
         System.out.println("1) Mario;");
         System.out.println("2) Coins.");
         System.out.println("3) Go to the previous menu.");
+        System.out.println("********************");
         System.out.println();
-        System.out.println("Please enter your choice:");
+        System.out.println("Please enter your choice (1-3):");
         int choiceGames = TextIO.getlnInt();
 
         //Exit choice
@@ -39,10 +42,17 @@ public class Games {
             }
 
             if(choiceGames ==1) {
-            //return Mario;
-            } else if(choiceGames ==2) {
-            //return Coins;
+            mario.marioGame();
             }
+
+            if(choiceGames ==2) {
+            coins.coinsGame();
+            }
+
+            if (choiceGames == 3) {
+                projectStart.projectStart();
+            }
+
         }
     }
 }
