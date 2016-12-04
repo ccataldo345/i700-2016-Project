@@ -5,5 +5,14 @@ package it.ccataldo345.project2016.Shop;
  */
 public class Fruit extends Food  {
 
+    private double fruitPrice;
 
+    double getFruitPrice(){
+        return fruitPrice;
+    }
+
+    void setFruitPrice(){
+        this.fruitPrice = fruitPrice;
+    }
 }
+
