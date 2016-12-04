@@ -22,15 +22,17 @@ public class Account {
     public String accountHome() {
 
         System.out.println();
-        System.out.println("*** ACCOUNT ***.");
+        System.out.println("********************");
+        System.out.println("***** ACCOUNT ******.");
         System.out.println("What would you like to do?:");
-        System.out.println("1) Set your initial credit;");
-        System.out.println("2) Check your balance;");
+        System.out.println("1) Set your initial currentCredit;");
+        System.out.println("2) Check your currentCredit;");
         System.out.println("3) Check your password;");
         System.out.println("4) Calculate your gain;");
         System.out.println("5) Go to the previous menu.");
+        System.out.println("********************");
         System.out.println();
-        System.out.println("Please enter your choice:");
+        System.out.println("Please enter your choice (1-5):");
         int choice = TextIO.getlnInt();
 
         //Exit choice
@@ -58,7 +60,7 @@ public class Account {
             }
 
             if (choice == 2) {
-                balance.currentBalance(name, credit);
+                balance.currentCredit(name, credit);
             }
 
             if (choice == 3) {

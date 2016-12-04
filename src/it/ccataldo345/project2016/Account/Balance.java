@@ -5,22 +5,33 @@ package it.ccataldo345.project2016.Account;
  */
 public class Balance {
 
+    InitialCredit initialCredit = new InitialCredit();
+    //Balance balance = new Balance();
+
     public String name;
-    public double balance;
+    public double currentCredit;
 
-    public String currentBalance (String name, Double balance) {
+    public String currentCredit(String name, Double balance) {
 
-        // set: if balance is 0 > go to InitialCredit;
+        // set: if currentCredit is 0 > go to InitialCredit;
 
         this.name = name;
-        this.balance = balance;
+        this.currentCredit = currentCredit;
+        //credit(initialCredit.getInitialCredit());
 
-        String creditRound = String.format("%.2f", this.balance);  // set the decimals to 2
-        this.balance = Double.valueOf(creditRound);
 
-        System.out.println("Thank you Mr. " + name + ", your balance is: " + this.balance + " Euro.");
+
+        String creditRound = String.format("%.2f", this.currentCredit);  // set the decimals to 2
+        this.currentCredit = Double.valueOf(creditRound);
+
+        System.out.println("Thank you Mr. " + name + ", your currentCredit is: " + this.currentCredit + " Euro.");
         return "OK";
     }
+/*
+    private void buyProduct(Account account, Product product) {
+        account.setCredit(account.getCredit - product.getPrice());
+//do other things here
+    }*/
 }
 
 

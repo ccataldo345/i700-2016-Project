@@ -26,11 +26,11 @@ public class Shop {
         System.out.println("********************");
         System.out.println();
         System.out.println("Please enter your choice (1-3):");
-        int choiceGames = TextIO.getlnInt();
+        int choiceShop = TextIO.getlnInt();
 
         //Exit choice
         while (true) {
-            if (choiceGames != 1 && choiceGames != 2 && choiceGames != 3 && choiceGames != 4 && choiceGames != 5) {
+            if (choiceShop != 1 && choiceShop != 2 && choiceShop != 3 && choiceShop != 4 && choiceShop != 5) {
                 System.out.printf("Do you want to exit?(y/n):\n");
                 Character exit = TextIO.getlnChar();
                 if (exit == 'y') {
@@ -42,12 +42,18 @@ public class Shop {
                 }
             }
 
-            if(choiceGames ==1) {
+            if(choiceShop ==1) {
                 //food.foodHome();
+            }
 
-            } else if(choiceGames ==2) {
+            if(choiceShop ==2) {
                 //electronics.electronicsHome();
             }
+
+            if(choiceShop==3){
+                projectStart.projectStart();
+            }
+
         }
     }
 }

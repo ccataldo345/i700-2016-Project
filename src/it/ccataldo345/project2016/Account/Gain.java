@@ -33,17 +33,17 @@ public class Gain {
 
     public void calculateGain() {
 
-        // set: if balance is 0 > go to InitialCredit;
+        // set: if currentCredit is 0 > go to InitialCredit;
 
-        System.out.println("Please enter the deposit period of your credit: ");
+        System.out.println("Please enter the deposit period of your currentCredit: ");
         this.period = TextIO.getlnDouble();
-        System.out.printf("Please enter the initialCredit balance you want to deposit: \n");
+        System.out.printf("Please enter the initialCredit currentCredit you want to deposit: \n");
 
-        this.gain = /*balance * */this.period * YIELD;   //Gain formula
+        this.gain = /*currentCredit * */this.period * YIELD;   //Gain formula
         String round = String.format("%.2f", this.gain);  // set the decimals to 2
         this.gain = Double.valueOf(round);
 
-        System.out.println("If you deposit your credit of ..., you will earn: " + this.gain + " Euro.");
+        System.out.println("If you deposit your currentCredit of ..., you will earn: " + this.gain + " Euro.");
         System.out.println();
         return;
     }

@@ -37,12 +37,7 @@ public class Password {
         } else {
             System.out.println("The number " + passwordLength + " is odd.");
         }
-
-
-
-
         //replace characters (from - to)
-        //System.out.println("Encrypted password: " + password.replace("a", "@").replace("s", "5").replace("o", "0"));
         System.out.println("Your encrypted password is: ");
         String cryptedPassword = password.replace("a", "@").replace("s", "5").replace("o", "8");
         System.out.println(cryptedPassword);

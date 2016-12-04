@@ -7,7 +7,7 @@ import lib.TextIO;
  */
 public class Coins {
 
-    public Coins (String[] args) {
+    public void coinsGame () {
 
         int coins, c0, c1, c2, c3, c4, c5, c6, c7;  //no. of coins
         double x1, x2, x3, x4, x5, x6, x7;          //change after x coin value
@@ -45,8 +45,6 @@ public class Coins {
         System.out.println();
 
         changeNotes = ((int)changeTotal / 5) * 5;
-        changeCoins = changeTotal - changeNotes;
-
 
         System.out.printf("Your change in notes is: %.2f Euro.\n", changeNotes);
         System.out.println();
@@ -57,7 +55,6 @@ public class Coins {
         changeCoins = Math.round(changeCoins*100.00);
 
         // calculate number of coins
-
         //coins value
         twoEuro = 200;
         oneEuro = 100;
@@ -96,8 +93,6 @@ public class Coins {
         k7 = c7 * oneCent;
         kTot = (k0 + k1 + k2 + k3 + k4 + k5 + k6 + k7);
 
-
-
         System.out.printf("- Coins of 2 Euro:   %d  (%.2f)\n", c0, k0/100);
         System.out.printf("- Coins of 1 Euro:   %d  (%.2f)\n", c1, k1/100);
         System.out.printf("- Coins of 50 cent:  %d  (%.2f)\n", c2, k2/100);
@@ -110,8 +105,9 @@ public class Coins {
         System.out.printf("TOTAL NO. OF COINS:  %d  (%.2f)\n", coins, kTot/100);
         System.out.printf("\n");
 
-        if (coins > 5)
+        if (coins > 5) {
             System.out.printf("I do not like coins!");
+        }
     }
 }
 
