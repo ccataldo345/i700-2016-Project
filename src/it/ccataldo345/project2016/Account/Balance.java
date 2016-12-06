@@ -8,23 +8,22 @@ public class Balance {
     InitialCredit initialCredit = new InitialCredit();
     //Balance balance = new Balance();
 
-    public String name;
-    public double currentCredit;
+    public static String name;
+    public static double currentCredit;
 
-    public String currentCredit(String name, Double balance) {
+    public static String currentCredit() {
 
         // set: if currentCredit is 0 > go to InitialCredit;
 
-        this.name = name;
-        this.currentCredit = currentCredit;
+        //this.name = name;
         //credit(initialCredit.getInitialCredit());
 
 
 
-        String creditRound = String.format("%.2f", this.currentCredit);  // set the decimals to 2
-        this.currentCredit = Double.valueOf(creditRound);
+        String creditRound = String.format("%.2f", currentCredit);  // set the decimals to 2
+        currentCredit = Double.valueOf(creditRound);
 
-        System.out.println("Thank you Mr. " + name + ", your currentCredit is: " + this.currentCredit + " Euro.");
+        System.out.println("Thank you Mr. " + name + ", your currentCredit is: " + currentCredit + " Euro.");
         return "OK";
     }
 /*

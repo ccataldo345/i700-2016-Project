@@ -8,11 +8,11 @@ import lib.TextIO;
 public class InitialCredit {
 
     public String name;
-    public double initialCredit;
+    public double initialCredit = 0;
 
     public String creditSet(String name, double initialCredit) {
 
-        this.name = name;
+        //this.name = name;
         this.initialCredit = initialCredit;
         Account account = new Account();
 
@@ -25,8 +25,10 @@ public class InitialCredit {
         } else {
             System.out.println("Please enter your name: ");
             name = TextIO.getlnString();
+            Balance.name = name;
             System.out.printf("Please enter the amount you want to deposit: \n");
             initialCredit = TextIO.getlnDouble();
+            Balance.currentCredit = initialCredit;
             System.out.println("Mr. " + name + ", your initial currentCredit is set to " + initialCredit + " Euro.");
             return "OK";
         }return"OK";
