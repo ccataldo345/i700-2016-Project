@@ -9,8 +9,8 @@ import lib.TextIO;
 public class Account {
 
 
-    public String name;
-    public double credit;
+    private String name;
+    private double credit;
 
     ProjectStart projectStart = new ProjectStart();
     InitialCredit initialCredit = new InitialCredit();
@@ -25,8 +25,8 @@ public class Account {
         System.out.println("********************");
         System.out.println("***** ACCOUNT ******.");
         System.out.println("What would you like to do?:");
-        System.out.println("1) Set your initial currentCredit;");
-        System.out.println("2) Check your currentCredit;");
+        System.out.println("1) Set your initial Credit;");
+        System.out.println("2) Check your current Credit;");
         System.out.println("3) Check your password;");
         System.out.println("4) Calculate your gain;");
         System.out.println("5) Go to the previous menu.");
@@ -52,15 +52,11 @@ public class Account {
             if (choice == 1) {
                 initialCredit.creditSet(name, credit);
 
-                /*//clean the interface
-                public static void clearScreen() {
-                    System.out.print("\033[H\033[2J");
-                    System.out.flush();
-                }*/
             }
 
             if (choice == 2) {
-                balance.currentCredit(name, credit);
+                balance.currentCredit();
+                //System.out.println("aaa");
             }
 
             if (choice == 3) {

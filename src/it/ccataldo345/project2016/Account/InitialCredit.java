@@ -7,13 +7,26 @@ import lib.TextIO;
  */
 public class InitialCredit {
 
-    public String name;
-    public double initialCredit = 0;
+    private String name;
+    private double initialCredit = 0;
+    private double deposit = 0;
+    private double currentCredit = 0;
 
-    public String creditSet(String name, double initialCredit) {
+    //get and set variables name and currentCredit
+    public String getName() {
+        return this.name;
+    }
 
-        //this.name = name;
+    public double getInitialCredit() {
+        return initialCredit;
+    }
+
+    public void makeDeposit(double initialCredit) {
         this.initialCredit = initialCredit;
+    }
+
+    public void creditSet(String name, double initialCredit) {
+
         Account account = new Account();
 
         String creditRound = String.format("%.2f", this.initialCredit);  // set the decimals to 2
@@ -25,29 +38,14 @@ public class InitialCredit {
         } else {
             System.out.println("Please enter your name: ");
             name = TextIO.getlnString();
-            Balance.name = name;
-            System.out.printf("Please enter the amount you want to deposit: \n");
+            //Balance.name = name;
+            System.out.printf("Please enter the amount you want to deposit: \n\n");
             initialCredit = TextIO.getlnDouble();
-            Balance.currentCredit = initialCredit;
-            System.out.println("Mr. " + name + ", your initial currentCredit is set to " + initialCredit + " Euro.");
-            return "OK";
-        }return"OK";
+            //Balance.currentCredit = initialCredit;
+            System.out.println("Mr. " + name + ", your initial Credit is set to " + initialCredit + " Euro.");
+        }
+
+        account.accountHome();
     }
 
-    //get and set variables name and currentCredit
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getInitialCredit() {
-        return initialCredit;
-    }
-
-    public void setInitialCredit(double initialCredit) {
-        this.initialCredit = initialCredit;
-    }
 }

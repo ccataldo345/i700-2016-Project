@@ -6,7 +6,9 @@
 package it.ccataldo345.project2016.AAAMain;
 
 import it.ccataldo345.project2016.Account.Account;
+//import it.ccataldo345.project2016.Account.Balance;
 import it.ccataldo345.project2016.Account.Balance;
+import it.ccataldo345.project2016.Account.InitialCredit;
 import it.ccataldo345.project2016.Games.Games;
 import it.ccataldo345.project2016.Shop.Shop;
 import lib.TextIO;
@@ -29,7 +31,8 @@ public class ProjectStart {
         Games games = new Games();
         Shop shop = new Shop();
         ClearScreen clearScreen = new ClearScreen();
-        //Balance currentCredit = new Balance();
+        Balance currentCredit = new Balance();
+        InitialCredit initialCredit = new InitialCredit();
 
         System.out.println();
         System.out.println("********************");

@@ -30,14 +30,14 @@ public class Coins {
 
         //paymant less than cost
         if (payment < cost) {
-            System.out.printf("Please add %.2f Euro.\n", (cost-payment));
-            return;
+            System.out.printf("Please add %.2f Euro.\n\n", (cost-payment));
+            exitMenu();
         }
 
         //Payment equal cost, no change due
         if (changeTotal == 0) {
-            System.out.printf("No change is due. Thanks for buying at Java Coins. \n");
-            return;
+            System.out.printf("No change is due. Thanks for buying at Java Coins. \n\n");
+            exitMenu();
         }
 
         //payment more than cost, change calculation
@@ -107,6 +107,21 @@ public class Coins {
 
         if (coins > 5) {
             System.out.printf("I do not like coins!");
+        }
+
+        exitMenu();
+    }
+
+    public void exitMenu() {
+        Games games = new Games();
+        char input;
+        System.out.println("Do you want to play again? (y/n)");
+        input = TextIO.getChar();
+        if (input == 'y'){
+            coinsGame();
+        }
+        else {
+            games.gamesHome();
         }
     }
 }
